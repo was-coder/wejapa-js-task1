@@ -1,0 +1,84 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .circle {
+        display: block;
+        border:1px solid #000;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .control {
+        position:relative;
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+
+        input {
+            display: block;
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            font-weight:bold;
+        }
+
+        .error, .success {
+            position: absolute;
+            top:10px;
+            right:-25px;
+            visibility:hidden;
+        }
+
+        small {
+            position: absolute;
+            left: 0;
+            top: 40px;
+            font-weight: bold;
+            color: gray;
+        }
+    }
+
+    button {
+            letter-spacing: 2px;
+        }
+}
+
+.form .success input {
+    border-color: green;
+  }
+  
+.form .success small {
+    visibility: hidden;
+  }
+  
+.form .success .success {
+    color: green;
+    visibility: visible;
+  }
+  
+.form .error input {
+    border-color: red;
+  }
+  
+.form .error .error{
+    color: red;
+    visibility: visible;
+  }
+  
+.form .error small {
+    color: red;
+    visibility: visible;
+  }
